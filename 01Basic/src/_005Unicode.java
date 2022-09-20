@@ -8,7 +8,7 @@ public class _005Unicode {
 
     public static void main(String[] args) {
         char yen = '\u00a5';
-        System.out.println(yen);
+        System.out.println(yen); // 유니코드 문제는 나중에 다룹시다.
 
         char omega = '\u03c9';
         System.out.println(omega);
