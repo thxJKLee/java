@@ -28,3 +28,12 @@ hs_err_pid*
 replay_pid*
 
 # End of https://www.toptal.com/developers/gitignore/api/java
+
+
+# 위는 gitignore.io 이용
+
+# 아래는 vscode에서 생성되는 항목
+
+
+*/README.md
+*/.vscode
