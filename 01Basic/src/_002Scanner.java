@@ -6,6 +6,9 @@ import java.util.Scanner;
  * Scanner 데이터 추출 클래스를 활용합니다.
  * 
  * java.util.Scanner를 이용합니다.
+ * 
+ * 마지막에는 반드시 close를 해야합니다.
+ * [물론 운영체제 측에서 컨트롤 해줄거 같지만요]
  */
 public class _002Scanner {
 
