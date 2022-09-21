@@ -32,8 +32,11 @@ replay_pid*
 
 # 위는 gitignore.io 이용
 
+
 # 아래는 vscode에서 생성되는 항목
-
-
 */README.md
 */.vscode
+
+
+# 설명이 필요하여 예외적으로 허용한 항목
+!05_Polymorphism/README.md
