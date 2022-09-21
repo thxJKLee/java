@@ -39,4 +39,5 @@ replay_pid*
 
 
 # 설명이 필요하여 예외적으로 허용한 항목
-!05_Polymorphism/README.md
+!05Polymorphism/README.md
+!06Interface/README.md
