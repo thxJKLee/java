@@ -40,6 +40,7 @@ public class _002Math {
 
         // java.util 패키지에 있는 Random클래스가 쪼끔더 고급적이다고 함.
         var R = new Random(); // 매개변수로 seed 값 넣을 수 있음. 생략하면 알아서
+        // 일정 범위내의 랜덤값을 주는건 적당히 알겠지
         for (int i = 0; i < 10; i++)
             System.out.printf("%d ", R.nextInt(10));
         System.out.println();

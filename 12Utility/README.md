@@ -55,3 +55,99 @@
 > > long nextLong()
 > > double nextDouble()
 > > 그외 nextGaussian 이나, setSeed로 시드를 중간에 변경하는 방식.
+
+---
+
+---
+
+# Calendar [Date타입이 아닌 이유는 폐기됐기 때문인데 가끔 씀]
+
+---
+
+> currentTimeMillis 만으로 하기에는, 일상속에는 너무 다양한 시간진법이 있어서
+>
+> ## java.tuil.Calendar 클래스.
+>
+> ---
+>
+> 사실은, 좀 더 구체적인 다른 클래스를 사용함
+
+---
+
+# java.util.GregorianCalendar 클래스.
+
+> 여기에는 아예 생략
+> 또는, 년,달,일,[시,분,초] // 뒤에는 생략가능
+>
+> > int get(int field)로 각 요소를 뽑을 수 있는데
+> > 이때 field에는 Calendar 클래스의 static 상수를 사용한다.;
+
+---
+
+---
+
+---
+
+## java.text.SimpleDateFormat
+
+> 포매팅과 비슷하게 작성하면 거기에 맞춰서 작동함.
+> String format(Date date)
+>
+> > Date타입은 Calendar 객체에서 getTime().
+
+| 패턴 | 설명      |
+| ---- | --------- |
+| y    | 년        |
+| M    | 월        |
+| d    | 일        |
+| a    | 오전,오후 |
+| E    | 요일      |
+| H    | 0~23 시간 |
+| k    | 1~24 시간 |
+| K    | 0~11 시간 |
+| h    | 1~12 시간 |
+| m    | 분        |
+| s    | 초        |
+| S    | 1/1000초  |
+
+> 날짜간의 연산
+>
+> > add(int field, int amount)
+> > roll(int field, int amount)
+> >
+> > > add는 넘치면 알아서 다음것을 넘기는데, roll은 자르는 방식으로 함.
+> > > 말그대로 날짜끼리의 차는 직접 해줘야 됨. [_003Calendar.java Line:31]
+
+하지만 Calendar 클래스의 경우 윤초를 제대로 못다루고 항상 수정 가능성이 있음.
+
+---
+
+---
+
+# LocalDate, LocalTime
+
+> LocalDate 는 년 분 월
+>
+> > 1.  int getYear()
+> > 2.  Month getMonth()
+> > 3.  int getMonthValue()
+> > 4.  int getDayOfMonth()
+> > 5.  DayOfWeek getDayOfWeek()
+>
+> LocalTime 은 시 분 초
+>
+> > 1.  int getHour()
+> > 2.  int getMinute()
+> > 3.  int getSecond()
+> > 4.  int getNano()
+>
+> 1. LocalDate plusDays(long daysToAdd)
+> 2. LocalDate minusDays(long daysToSubtract)
+> 3. LocalTime plusMinutes(long minutesToAdd)
+> 4. LocalTime minusMinutes(long minutesToSubtract)
+
+---
+
+---
+
+> 물론 여기서 제일 주요한 점은. 만... 만나이 처럼. 만으로 계산하는 경우가. 날짜에서는 특히 많아서. 그거를 좀 주의하면 좋을 듯
