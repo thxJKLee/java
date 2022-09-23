@@ -35,9 +35,14 @@ replay_pid*
 
 # 아래는 vscode에서 생성되는 항목
 */README.md
+*/*/README.md
 */.vscode
+*/*/.vscode
 
 
 # 설명이 필요하여 예외적으로 허용한 항목
 !05Polymorphism/README.md
 !06Interface/README.md
+!09SystemLibrary/README.md
+!10Boxing/README.md
+!11System/README.md

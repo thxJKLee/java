@@ -15,8 +15,6 @@ public class _001Abstract {
         // Animal animal = new Animal(); // 오류. abstract 클래스라서 변수로 선언이 불가능.
         // 정확히는 new 선언이 안되는 것이지. 타입 자체는 만들 수 있음.
 
-        Hello.morning(); // 이렇게 추상 클래스 내부의 메서드 자체는 바로 쓸 수 있음.[static이니깐 또]
-
         Animal animal = new Dog(); // abstract 지만 Dog객체의 부모라 이런식으로 생성은 가능
         ((Dog) animal).move(); // 여전히 다형성 활용은 가능
     }
